@@ -1,0 +1,158 @@
+.hero .menu {
+
+    z-index: 2;
+    position: absolute;
+    overflow: hidden;
+    top: 25px;
+    height: 100vh;
+    width: 100vw;
+    transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+
+    transform: translateX(-100%);
+    border-radius: 0% 75% 0% 0%;
+
+}
+
+.hero .menu.nav-open {
+    transform: translateX(0px);
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+}
+
+.hero .menu .links {
+    padding: 5%;
+
+    margin-top: 30%;
+    text-align: left;
+}
+
+.hero .menu .links hr {
+    margin-top: 0;
+}
+
+.hero .menu .links a {
+    font-size: 16px;
+    padding-left: 5%;
+    color: #5D703F;
+    display: block;
+}
+
+.menu .contact {
+    position: absolute;
+    bottom: 0;
+    padding-top: 15px;
+    color: white;
+    background-color: #5D703F;
+    width: 100%;
+}
+
+.menu .contact hr {
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.menu .contact h2 {
+    font-size: 22px;
+}
+
+.menu .icons {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    justify-content: center;
+    gap: 10%
+}
+
+.menu .icons .circle-footer {
+    width: 35px;
+    height: 35px;
+}
+
+.menu .icons .circle-footer img {
+    width: 30px;
+    height: auto;
+}
+
+.menu .icons #mail {
+    position: relative;
+}
+
+.menu .icons #mail img{
+    width: 30px;
+}
+
+.menu .icons #mail p {
+    position: absolute;
+    top: -20px;
+    width: 200%;
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.menu .icons #mail p.open {
+    top: -55px;
+    opacity: 1;
+}
+
+@media (min-width: 850px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+.menu-btn {
+    z-index: 3;
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6%;
+    padding: 0;
+    width: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-btn .line {
+    padding: 0;
+    width: 30px;
+    background: #fff;
+    height: 2px;
+    margin: 5px 0;
+
+    border-radius: 5px;
+    transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+}
+
+.menu-btn .line.line--1 {
+    width: 30px;
+    transform: rotate(0) translateY(0);
+}
+
+.menu-btn .line.line--1.line-cross {
+    width: 30px;
+    transform: rotate(45deg) translateY(10px);
+   background-color: #5D703F;
+}
+
+.menu-btn .line.line--2 {
+    width: 30px;
+    transform: translateX(0);
+}
+
+.menu-btn .line.line--2.line-fade-out {
+    width: 28px;
+    transform: translate(30px);
+    opacity: 0;
+}
+
+.menu-btn .line.line--3 {
+    width: 30px;
+    transform: rotate(0) translateY(0);
+}
+
+.menu-btn .line.line--3.line-cross {
+    width: 30px;
+    transform: rotate(-45deg) translateY(-10px);
+    background-color: #5D703F;
+}
